@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>TucFlix</title>
+  </head>
+  <body class="color-azul" >
+      
+    <header>
+      <nav class="navbar-tucflix">
+        <ul class="ul-style">
+          <li class="li-style"><a class="a-style active" href="index.html">Home</a></li>
+          <li class="li-style"><a class="a-style" href="#scBuscar">Buscar</a>
+          </li>
+          <li class="li-style"><a class="a-style" href="#formulario">Contacto</a>
+          </li>
+          <li class="li-style"><a class="a-style" href="#estrenos">Estrenos</a>
+          </li>
+          <li class="li-style"><a class="a-style" href="#populares">Populares</a>
+          </li>
+          <li class="li-style"><a class="a-style" href="#series">Series</a>
+          </li>
+          <li class="li-style"><a class="a-style" href="#aboutUs">About Us</a>
+          </li>
+          <!-- LOGO -->
+          <h1 class="logo"><span>T</span>uc<span>F</span>lix</h1>
+        </ul> 
+      </nav>
+    </header>
+
+    <!-- hero -->
+    <main>
+      <div class="hero">
+        <div class="hero-logo">
+          <h1 class="logo logo-style"><span>T</span>uc<span>F</span>lix</h1>
+        </div>
+        <img src="./img/hero.png" class="herodesktop img-z w-100" alt="Imagen Hero">
+        <img src="./img/hero-m.png" class="heromobile img-z w-100" alt="Imagen Hero">
+      </div><!--FIN DE HERO-->
+      
+      <!-- BUSCADOR -->
+      <section class="container" id="scBuscar">
+        <div class="d-flex row py-3 color-azul">
+          <div>
+            <label for="textoBuscar" class="form-label fs-4 fw-bold text-white">Busca tu película</label>
+            <div class="d-flex">
+              <input type="text" class="form-control d-flex" id="textoBuscar" placeholder="Ingresa aquí el nombre de la película">
+              <button type="button" class="btn btn-success ms-1 d-flex fw-bold" onclick="get_peliculas(1)">Buscar</button>
+            </div>    
+          </div>
+        </div>
+
+        <div id="resultadoBuscarTexto">
+          
+        </div>
+        <div class="d-flex row" id="resultadoBuscarCards">
+          
+        </div>
+        <div class="d-flex justify-content-center" id="resultadoBuscarPaginas">
+          
+        </div>
+      </section><!--FIN DE BUSCADOR-->
+      
+      <!-- Estrenos -->
+      <section class="nombre-estrenos py-2" id="estrenos">
+        <div class="">
+          <h2 class="nombre-style my-1 fs-4 fw-bold text-white mx-3">Estrenos más recientes</h2>
+          <div class="titulo-estrenos">
+            
+          </div>
+          <div class="scroll-estrenos py-1">
+              <div class="cards_s row" id="cardEstrenos"></div>
+          </div>
+        </div>
+      </section><!--FIN DE ESTRENOS-->
+
+      <!-- Películas Populares -->
+      <section class="nombre-peliculas-populares py-2" id="populares">
+        <div class="mx-3">
+          <h2 class="nombre-style my-1 fs-4 fw-bold text-white">Películas populares</h2>
+          <div class="titulo-estrenos">
+            
+          </div>
+          <div class="scroll-estrenos py-1">
+              <div class="cards_s row" id="cardPeliculasPopulares"></div>
+          </div>
+        </div>
+      </section><!--FIN DE PELICULAS POPULARES-->
+
+      <!-- Series más vistas -->
+      <section class="nombre-series-populares py-2" id="series">
+        <div class="mx-3">
+          <h2 class="nombre-style my-1 fs-4 fw-bold text-white">Series más vistas</h2>
+          <div class="titulo-estrenos">
+            
+          </div>
+          <div class="scroll-estrenos py-1">
+              <div class="cards_s row" id="cardSeriesPopulares"></div>
+          </div>
+        </div>
+      </section><!--FIN DE SERIES MAS VISTAS-->
+    
+      <!-- FORMULARIO -->
+      <form action="" class="container mt-3 text-white box-style text-style" id="formulario" name="miFormulario">
+
+        <div class="text-principal-form text-center m-3">
+          <h2>Solicitud de Peliculas y Series</h2>
+        </div>
+        
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Nombre Completo</label>
+          <input type="text" class="form-control" id="nameFormulario" placeholder="Escribe tu nombre y apellido">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="emailFormulario" placeholder="Escribe tu email">
+        </div>
+
+        <div class="">
+          <h6 class="text-style">Selecciona una clase</h6>
+          <div class="form-check">
+            <input class="form-check-input" value="series" type="radio" name="flexRadioDefault" id="select1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Series
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" value="peliculas" type="radio" name="flexRadioDefault" id="select2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">Peliculas
+            </label>
+          </div>
+        </div>
+
+        <div class="mb-3 mt-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Escribe Aquí</label>
+          <textarea class="form-control" id="textAreaForm" rows="3" placeholder="Escribe aqui tu solicitud"></textarea>
+        </div>
+
+        <input class=" button-style text-style mb-4" type="submit" value="Enviar" onclick="getFormulario()">
+      </form><!--FIN DE FORMULARIOS-->
+    
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6" id="aboutUs">
+            <h6>About Us</h6>
+            <p class="text-justify">Somos TucFlix!!! La primera proveedora de servicios de streming del norte de Argentina. Tenemos el catálogo más completo y actualizado de la region. Nuestro equipo está formado por gente joven y emprededora. Esperamos que sea de tu agrado. </p>
+          </div>
+          <!-- CATEGORIAS FOOTER -->
+          <div class="col-xs-6 col-md-3">
+            <h6>Categorias</h6>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#scBuscar">Busca Tu Peli</a></li>
+              <li><a href="index.html#estrenos">Estrenos</a></li>
+              <li><a href="index.html#populares">Populares</a></li>
+              <li><a href="index.html#series">Series</a></li>
+              <li><a href="index.html#formulario">Contacto</a></li>
+            </ul>
+          </div><!--FIN DE CATEGORIAS FOOTER -->
+
+          <!-- QUICK LINKS FOOTER -->
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="#formulario">Contactanos</a></li>
+              <h6>Contribuidores</h6>
+              <li>
+                <a href="https://github.com/David-fStack" target="_blank">Moyano David</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/carlos-cianci" target="_blank">Cianci Carlos</a>
+              </li>
+
+              <li>
+                <a href="404.html" target="_blank">Beltrame Ana</a>
+              </li>
+
+              <li>
+                <a href="404.html" target="_blank">Soria Romina</a>
+              </li>
+
+              <li>
+                <a href="404.html" target="_blank">Nacho Riera</a>
+              </li>
+
+              <li>
+                <a href="404.html" target="_blank">Nicolas Emperador</a>
+              </li>
+            </ul>
+          </div><!--FIN DE QUICK LINKS FOOTER -->
+        </div>
+        <hr>
+
+        <!-- ICONS FOOTER -->
+        <div class="row"> 
+          <div class = "reloj-mobile col-12 col-md-6" id="fecha-hora"></div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li>
+                <a class="facebook" href="404.html">
+                  <i class="bi bi-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a class="twitter" href="404.html">
+                  <i class="bi bi-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a class="dribbble" href="404.html">
+                  <i class="bi bi-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a class="linkedin" href="404.html">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+              </li>   
+            </ul>
+          </div>
+        </div><!--FIN DE ICONOS FOOTER -->
+      </div>
+    </footer><!--FIN DE FOOTER-->
+     
+    <script src="./js/reloj.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

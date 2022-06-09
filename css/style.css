@@ -1,0 +1,399 @@
+:root{
+  --azul-oscuro: #1B262C;
+  --azul: #0F4C75;
+  --azul-claro:#3282B8;
+  --acua: #BBE1FA;
+  --blanco: #fff;
+  --black: black;
+  --verde: #198754;
+
+  --font1: 'Moo Lah Lah', cursive;
+  --font2: 'Space Grotesk', sans-serif;
+}
+
+/* RELOJ */
+.hora_estilo {
+  font-size: smaller;
+}
+
+/* NAVBAR */
+.navbar-tucflix {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+.logo {
+  color: var(--blanco);
+  font-family: 'Nerko One', cursive; 
+  text-align: end;
+  margin-right: 1rem;
+}
+
+span {
+  color: red;
+}
+
+.ul-style {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.li-style {
+  float: left;
+}
+
+.li-style .a-style {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.li-style .a-style:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #198754;
+}
+
+/* HERO */
+.hero {
+  padding-top: 8vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo {
+  position: absolute;
+  z-index: 1;
+  opacity: .9;
+ 
+  
+}
+
+.logo-style {
+  text-align: center;
+  background-color: #111;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 9rem;
+  z-index: -2;
+}
+
+.img-z {
+  z-index: -3;
+  
+}
+.color-azul {
+  background-color: #0F4C75;
+}
+
+.card-img-formato {
+  height: 250px;
+  width: 180px;
+  border-radius: 15px;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--azul-claro);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--acua);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 5px solid (var(--azul-claro));  /* creates padding around scroll thumb */
+}
+
+.nombre-estrenos {
+  background-color: var(--azul-claro);
+  padding: 1rem;
+}
+
+.nombre-peliculas-populares {
+  background-color: var(--azul);
+}
+
+.nombre-series-populares {
+  background-color: var(--azul-claro);
+}
+
+/* Card Estrenos */
+.card-img-tamaño{
+  height: 250px;
+  width: 180px;
+  border-radius: 15px;
+
+
+}
+
+/* Scroll Estrenos */
+.scroll-estrenos {
+  overflow-x: auto;
+}
+
+.scroll-estrenos::-webkit-scrollbar {
+  height: 10px;
+}
+
+.scroll-estrenos::-webkit-scrollbar-track {
+  background: var(--azul-claro);        /* color of the tracking area */
+}
+
+.scroll-estrenos::-webkit-scrollbar-thumb {
+  background-color: var(--acua);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 5px solid (var(--azul-claro));  /* creates padding around scroll thumb */
+}
+
+/* FORMULARIO */
+.text-style {
+  color: var(--blanco);
+  font-weight: bold;
+}
+
+.box-style {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.button-style {
+  font-size: 1.2rem;
+  background-color: #198754;
+  color: var(--blanco);
+  border-radius: 6px;
+  border-color: #198754;
+  width: 5rem;
+  height: 2.5rem;
+}
+
+
+/* FOOTER */
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+
+/* MEDIA QUERYS */
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+
+.heromobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .herodesktop {
+    display: none;
+  }
+  .heromobile {
+    display:block;
+  }
+}
+
+@media (max-width: 460px) {
+  .hero {
+    padding-top: 15vh;
+  }
+  .logo-style {
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .hero {
+    padding-top: 6rem;
+  }
+  .reloj-mobile {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 390px) {
+  .hero {
+    padding-top: 6rem;
+  }
+  .logo-style {
+    font-size: 5rem;
+  }
+  .reloj-mobile {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 280px) {
+  .hero {
+    padding-top: 9rem;
+  }
+  .reloj-mobile {
+    display: flex;
+    justify-content: center;
+  }
+
+}
